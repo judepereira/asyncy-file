@@ -1,0 +1,8 @@
+commands:
+  entrypoint:
+    help: Write anything to a file
+    args:
+      - data:any
+      - file:file
+    additional_args: false
+    additional_kwargs: false
