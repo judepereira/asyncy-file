@@ -1,8 +1,49 @@
 commands:
-  entrypoint:
+  write:
     help: Write anything to a file
     args:
       - data:any
       - file:file
     additional_args: false
     additional_kwargs: false
+
+  read:
+    help: Read contents from a file
+    args:
+      - file:file
+    additional_args: false
+    additional_kwargs: false
+    result:
+      type: string
+
+  size:
+    help: Get file size
+    args:
+      - file:file
+    additional_args: false
+    additional_kwargs: false
+    result:
+      type: int
+      help: Bytes
+
+  exists:
+    help: Check if a file exists
+    args:
+      - file:file
+    additional_args: false
+    additional_kwargs: false
+    result:
+      type: boolean
+
+  type:
+    help: File or folder
+    args:
+      - file:file
+    additional_args: false
+    additional_kwargs: false
+    result:
+      type: enum
+      values:
+        - null
+        - folder
+        - file
